@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2017/12/11 20:05:58 by tbleuse          ###   ########.fr       */
+/*   Updated: 2017/12/21 14:10:07 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@
 #  include <string.h>
 # endif
 
-#include <errno.h>
+# define BUFF_SIZE 100
+# define FD_MAX 50
 
 typedef struct		s_list
 {
@@ -39,6 +40,7 @@ char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strdup(const char *s1);
 size_t				ft_strlcat(char *dest, const char *src, size_t count);
 size_t				ft_strlen(const char *str);
+size_t				ft_strlen_c(const char *s, char c);
 char				*ft_strncat(char *dest, const char *src, size_t n);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
 char				*ft_strstr(const char *haystack, const char *needle);
@@ -47,6 +49,7 @@ void				ft_putstr(char const *str);
 void				ft_putnbr(int nb);
 void				ft_putnbr_n(int nb);
 void				ft_putendl(char const *s);
+void				ft_put_special_endl(char const *s);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strnstr(const char *haystack,
 						const char *needle, size_t len);
@@ -99,9 +102,7 @@ void				ft_swap(int *a, int *b);
 int					ft_sqrt(int nb);
 int					ft_lstsize(t_list *begin_list);
 void				ft_lstrev(t_list **begin_list);
-void				ft_lstpushfront(t_list **begin_list,
-							void *data, size_t size);
 void				ft_lstpushback(t_list **begin_list,
 							void *data, size_t size);
-
+int					get_next_line(const int fd, char **line);
 #endif

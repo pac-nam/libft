@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 11:47:32 by tbleuse           #+#    #+#             */
-/*   Updated: 2017/12/02 17:54:42 by tbleuse          ###   ########.fr       */
+/*   Updated: 2017/12/20 12:13:55 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ size_t		ft_strlen(const char *str)
 	size_t		x;
 
 	x = 0;
-	if (str)
-		while (str[x])
-			x++;
+	while (str[x])
+		x++;
 	return (x);
 }

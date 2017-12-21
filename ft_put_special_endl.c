@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpushfront.c                                  :+:      :+:    :+:   */
+/*   ft_put_special_endl.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/24 16:45:03 by tbleuse           #+#    #+#             */
-/*   Updated: 2017/11/17 11:33:56 by tbleuse          ###   ########.fr       */
+/*   Created: 2017/11/11 10:27:59 by tbleuse           #+#    #+#             */
+/*   Updated: 2017/12/18 13:30:24 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_lstpushfront(t_list **begin_list, void *data, size_t size)
+void	ft_put_special_endl(char const *s)
 {
-	t_list		*new;
+	int			i;
 
-	if (begin_list != NULL)
+	i = -1;
+	if (s)
 	{
-		new = ft_lstnew(data, size);
-		new->next = *begin_list;
-		*begin_list = new;
+		while (s[++i] != '\0')
+			if (ft_isprint(s[i]))
+				write(1, &s[i], 1);
 	}
+	write(1, "\n", 1);
 }

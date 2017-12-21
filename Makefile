@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2017/12/06 16:22:56 by tbleuse          ###   ########.fr        #
+#    Updated: 2017/12/21 14:10:31 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ ft_realloc.c\
 ft_putchar.c\
 ft_putchar_fd.c\
 ft_putendl.c\
+ft_put_special_endl.c\
 ft_putendl_fd.c\
 ft_putnbr.c\
 ft_putnbr_n.c\
@@ -59,6 +60,7 @@ ft_striteri.c\
 ft_strjoin.c\
 ft_strlcat.c\
 ft_strlen.c\
+ft_strlen_c.c\
 ft_strmap.c\
 ft_strmapi.c\
 ft_strncat.c\
@@ -78,8 +80,8 @@ ft_swap.c\
 ft_sqrt.c\
 ft_lstsize.c\
 ft_lstrev.c\
-ft_lstpushfront.c\
-ft_lstpushback.c
+ft_lstpushback.c\
+get_next_line.c
 
 POINT_O = $(POINT_C:.c=.o)
 
@@ -94,12 +96,12 @@ $(NAME) : $(POINT_O) $(NAME).a
 %.o: %.c
 	gcc -c $(FLAGS) $< -o $@
 
-lib : all clean
-
 clean :
 	/bin/rm -f $(POINT_O)
 
 fclean : clean
 	/bin/rm -f $(NAME).a
+
+lib : all clean
 
 re : fclean all
