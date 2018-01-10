@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/01/10 10:24:03 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/01/10 10:34:56 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,6 @@ ft_realloc.c\
 ft_putchar.c\
 ft_putchar_fd.c\
 ft_putendl.c\
-ft_put_special_endl.c\
 ft_putendl_fd.c\
 ft_putnbr.c\
 ft_putnbr_n.c\
