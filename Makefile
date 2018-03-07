@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/03/07 10:29:47 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/03/07 11:03:05 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,6 +99,7 @@ PRINT_NAME	=	ft_putchar.c			\
 MATH_NAME	=	ft_bracket.c			\
 				ft_sqrt.c				\
 				ft_power.c				\
+				ft_sort_int_tab.c		\
 
 PRINTF_NAME	=	ft_printf.c				\
 				ft_m_count.c            \

@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math.h                                             :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/07 11:05:16 by tbleuse          ###   ########.fr       */
+/*   Created: 2018/03/07 10:54:38 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/03/07 11:05:56 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATH_H
-# define MATH_H
+#include "../header/libft.h"
 
-int		ft_sqrt(int nb);
-int		ft_bracket(char *str);
-int		ft_power(int nb, int power);
-int		*ft_sort_int_tab(int *tab, size_t length);
+int		*ft_sort_int_tab(int *tab, size_t length)
+{
+	size_t	index;
 
-#endif
+	index = 0;
+	if (length < 2)
+		return (tab);
+	while (index < length - 1)
+	{
+		if (tab[index] > tab[index + 1])
+		{
+			ft_swap(&tab[index], &tab[index + 1]);
+			index = 0;
+		}
+		++index;
+	}
+	return (tab);
+}
