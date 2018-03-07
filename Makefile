@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/03/06 18:34:59 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/03/07 10:29:47 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ FLAGS = -Wall -Wextra -Werror
 
 CONV_NAME	=	ft_atoi.c				\
 				ft_itoa.c				\
+				ft_itoa_base.c			\
 				ft_lltoa.c              \
 				ft_ulltoa_base.c        \
 				ft_wc_convert.c			\

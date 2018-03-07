@@ -1,59 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bracket.c                                       :+:      :+:    :+:   */
+/*   ft_brackets.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/27 10:07:26 by exam              #+#    #+#             */
-/*   Updated: 2018/03/06 17:30:07 by tbleuse          ###   ########.fr       */
+/*   Created: 2018/03/06 11:56:38 by exam              #+#    #+#             */
+/*   Updated: 2018/03/07 10:30:04 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int			ft_bracket_charcmp(char c, char c2)
+#include "../header/libft.h"
+
+static int		ft_bracket_charcmp(char c1, char c2)
 {
-	if ((c == 40 && c2 == 41) || (c == 41 && c2 == 40) ||
-			(c == 91 && c2 == 93) || (c == 93 && c2 == 91) ||
-			(c == 123 && c2 == 125) || (c == 125 && c2 == 123))
+	if ((c1 == '(' && c2 == ')') ||
+			(c1 == '{' && c2 == '}') ||
+			(c1 == '[' && c2 == ']'))
 		return (1);
 	return (0);
 }
 
-static int			ft_bracket_valid_char(char c)
+int				ft_brackets(char *str)
 {
-	if (c == 40 || c == 41 || c == 91 || c == 93 || c == 123 || c == 125)
-		return (1);
-	return (0);
-}
+	int		tab[100];
+	int		i;
 
-static int			ft_bracket_open_char(char c)
-{
-	if (c == 40 || c == 91 || c == 123)
-		return (1);
-	return (0);
-}
-
-int					ft_bracket(char *line)
-{
-	char		pile[200];
-	int			p_index = 0;
-	int			i = 0;
-
-	while(line[i])
+	tab[0] = 0;
+	i = 0;
+	while (str[i])
 	{
-		if (ft_bracket_valid_char(line[i]))
-		{
-			if (ft_bracket_open_char(line[i]))
-				pile[p_index++] = line[i];
-			else if (p_index > 0 &&
-					ft_bracket_charcmp(pile[p_index - 1], line[i]))
-				pile[p_index--] = 0;
-			else
+		if (str[i] == '(' || str[i] == '{' || str[i] == '[')
+			tab[++tab[0]] = str[i];
+		if (str[i] == ')' || str[i] == '}' || str[i] == ']')
+			if (!ft_bracket_charcmp(tab[tab[0]--], str[i]))
 				return (0);
-		}
 		++i;
 	}
-	if (p_index == 0)
-		return (1);
-	return (0);
+	if (tab[0] != 0)
+		return (0);
+	return (1);
 }

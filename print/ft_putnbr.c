@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:09:01 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 16:32:56 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/07 10:20:22 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,10 @@
 
 void	ft_putnbr(int nb)
 {
-	if (nb == -2147483648)
-	{
-		ft_putstr("-2147483648");
+	char	*str;
+
+	if (!(str = ft_itoa(nb)))
 		return ;
-	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb > -1 && nb < 10)
-		ft_putchar(nb + '0');
-	if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putchar((nb % 10) + '0');
-	}
+	write(1, str, ft_strlen(str));
+	free(str);
 }

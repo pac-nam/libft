@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:31:34 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/07 10:21:00 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,5 @@ size_t		ft_strlen(const char *str);
 size_t		ft_strlen_c(const char *str, char c);
 size_t		ft_strlenwcs(wchar_t *wcs);
 size_t		ft_wcslen(wchar_t *str);
-
 
 #endif
