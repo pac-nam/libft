@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 16:07:01 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 16:30:10 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 17:49:51 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,16 @@ static int	ft_count_char(char const *str)
 	len = 0;
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
 		i++;
-	while (str[i++])
-		len++;
-	i--;
+	while (str[i])
+	{
+		++i;
+		++len;
+	}
+	--i;
 	while (i >= 0 && (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'))
 	{
-		i--;
-		len--;
+		--i;
+		--len;
 	}
 	return (len);
 }
@@ -59,7 +62,7 @@ char		*ft_strtrim(char const *s)
 	if (!(str = (char*)malloc(len + 1)))
 		return (NULL);
 	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
+		++i;
 	while (j < len && s[i])
 		str[j++] = s[i++];
 	str[j] = '\0';
