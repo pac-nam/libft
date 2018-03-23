@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math.h                                             :+:      :+:    :+:   */
+/*   ft_random.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/07 11:05:16 by tbleuse          ###   ########.fr       */
+/*   Created: 2017/07/09 11:53:59 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/03/06 16:25:50 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATH_H
-# define MATH_H
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
-int		ft_random(void);
-int		ft_sqrt(int nb);
-int		ft_bracket(char *str);
-int		ft_power(int nb, int power);
-int		*ft_sort_int_tab(int *tab, size_t length);
+int	ft_random(void)
+{
+	static int	first = 0;
 
-#endif
+	if (!first)
+	{
+		srand(time(NULL));
+		first = 1;
+	}
+	return (rand());
+}

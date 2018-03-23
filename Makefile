@@ -99,6 +99,7 @@ PRINT_NAME	=	ft_putchar.c			\
 MATH_NAME	=	ft_bracket.c			\
 				ft_sqrt.c				\
 				ft_power.c				\
+				ft_random.c				\
 				ft_sort_int_tab.c		\
 
 PRINTF_NAME	=	ft_printf.c				\
