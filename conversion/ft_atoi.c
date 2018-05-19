@@ -6,15 +6,15 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:43:25 by tbleuse           #+#    #+#             */
-/*   Updated: 2017/11/17 14:47:38 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/05/18 10:29:41 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(const char *str)
 {
-	long int		nb;
-	long int		is_neg;
-	long int		i;
+	int		nb;
+	int		is_neg;
+	int		i;
 
 	nb = 0;
 	is_neg = 1;
