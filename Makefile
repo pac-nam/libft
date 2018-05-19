@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/05/18 10:40:03 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/05/19 12:32:18 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,10 +28,13 @@ CHAR_NAME	=	ft_isalnum.c			\
 				ft_isalpha.c			\
 				ft_isascii.c			\
 				ft_isdigit.c			\
+				ft_isxdigit.c			\
+				ft_ispunct.c			\
+				ft_iscntrl.c			\
+				ft_isspace.c			\
 				ft_isprint.c			\
 				ft_tolower.c			\
 				ft_toupper.c			\
-				ft_char_index.c			\
 
 MEMORY_NAME =	ft_memalloc.c			\
 				ft_memccpy.c			\
@@ -76,6 +79,8 @@ STR_NAME	=	ft_strcat.c				\
 				ft_strtrim.c			\
 				ft_wcslen.c				\
 				ft_strlenwcs.c			\
+				ft_char_index.c			\
+				ft_strpbrk.c			\
 
 LIST_NAME	=	ft_lstadd.c				\
 				ft_lstdel.c				\

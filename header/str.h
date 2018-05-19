@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 14:17:12 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/05/19 12:33:45 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int			ft_strcmp(const char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_strequ(char const *s1, char const *s2);
 int			ft_strnequ(char const *s1, char const *s2, size_t n);
+int			ft_char_index(const char *str, char c);
 char		*ft_strcat(char *dest, const char *src);
 char		*ft_strcpy(char *dest, const char *src);
 char		*ft_strdup(const char *s1);
@@ -26,6 +27,7 @@ char		*ft_strncat(char *dest, const char *src, size_t n);
 char		*ft_strncpy(char *dest, const char *src, size_t n);
 char		*ft_strstr(const char *haystack, const char *needle);
 char		*ft_strchr(const char *s, int c);
+char		*ft_strpbrk(const char *s, const char *charset);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strnew(size_t size);

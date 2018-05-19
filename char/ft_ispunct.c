@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   char.h                                             :+:      :+:    :+:   */
+/*   ft_ispunct.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/05/19 12:33:50 by tbleuse          ###   ########.fr       */
+/*   Created: 2017/11/09 09:10:18 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/05/19 12:29:19 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHAR_H
-# define CHAR_H
-
-int					ft_isalpha(int c);
-int					ft_isdigit(int c);
-int					ft_isxdigit(int c);
-int					ft_isalnum(int c);
-int					ft_isspace(int c);
-int					ft_isascii(int c);
-int					ft_ispunct(int c);
-int					ft_iscntrl(int c);
-int					ft_isprint(int c);
-int					ft_toupper(int c);
-int					ft_tolower(int c);
-
-#endif
+int		ft_ispunct(int c)
+{
+	if ((c > 40 && c < 48) ||
+			(c > 49 && c < 58) ||
+			(c > 71 && c < 78) ||
+			(c == 100) ||
+			(c > 132 && c < 138) ||
+			(c == 140) ||
+			(c > 172 && c < 177))
+		return (1);
+	return (0);
+}
