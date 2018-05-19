@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/03/07 11:03:05 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/05/18 10:40:03 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = libft
 FLAGS = -Wall -Wextra -Werror
 
 CONV_NAME	=	ft_atoi.c				\
+				ft_atoll.c				\
 				ft_itoa.c				\
 				ft_itoa_base.c			\
 				ft_lltoa.c              \
@@ -30,6 +31,7 @@ CHAR_NAME	=	ft_isalnum.c			\
 				ft_isprint.c			\
 				ft_tolower.c			\
 				ft_toupper.c			\
+				ft_char_index.c			\
 
 MEMORY_NAME =	ft_memalloc.c			\
 				ft_memccpy.c			\
