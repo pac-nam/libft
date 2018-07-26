@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/07/26 14:29:55 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/07/26 14:38:22 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -151,11 +151,11 @@ $(NAME) : $(POINT_O) $(NAME).a
 %.a: $(POINT_O)
 	@ar rc $(NAME).a $(POINT_O)
 	@ranlib $(NAME).a
-	@printf '\033[32m[ ✔ ] %s\n\033[0m' "libft compiled"
+	@printf '\n\033[32m[ ✔ ] %s\n\033[0m' "libft compiled"
 
 %.o: %.c
 	@gcc -c $(FLAGS) $< -o $@
-	@printf '\033[0m[ ✔ ] %s\n\033[0m' "$<"
+	@printf '\x1b[42m%c\x1b[0m' " "
 
 clean :
 	@/bin/rm -f $(POINT_O)
