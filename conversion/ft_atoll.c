@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:43:25 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/05/18 10:29:24 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/08/05 12:20:50 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ long long		ft_atoll(const char *str)
 	nb = 0;
 	is_neg = 1;
 	i = 0;
-	while (str[i] == '\r' || str[i] == '\v' || str[i] == '\t' ||
-			str[i] == '\f' || str[i] == '\n' || str[i] == ' ')
+	while (str[i] == '\r' || str[i] == '\v' || str[i] == '\t'
+			|| str[i] == '\f' || str[i] == '\n' || str[i] == ' ')
 		i++;
 	if (str[i] == '-')
 		is_neg = -1;

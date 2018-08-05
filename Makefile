@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/07/26 14:38:22 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/08/05 12:37:33 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -159,11 +159,11 @@ $(NAME) : $(POINT_O) $(NAME).a
 
 clean :
 	@/bin/rm -f $(POINT_O)
-	@printf '\033[31m[ ✔ ] %s\n\033[0m' "libft objects deleted"
+	@printf '\033[33m[ ✔ ] %s\n\033[0m' "libft objects deleted"
 
 fclean : clean
 	@/bin/rm -f $(NAME).a
-	@printf '\033[31m[ ✔ ] %s\n\033[0m' "libft deleted"
+	@printf '\033[33m[ ✔ ] %s\n\033[0m' "libft deleted"
 
 lib : all clean
 

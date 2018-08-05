@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 13:37:11 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 16:35:49 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/08/05 12:33:47 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,21 @@ static int		ft_printf_infos_z_len_pre(int **info, char *str, int max)
 	int			i;
 
 	i = 0;
-	while (!(ft_isdigit(str[i])) && str[i] != '.' && str[i] != 'h' &&
-			str[i] != 'l' && str[i] != 'j' && str[i] != 'z' && i < max)
+	while (!(ft_isdigit(str[i])) && str[i] != '.' && str[i] != 'h'
+			&& str[i] != 'l' && str[i] != 'j' && str[i] != 'z' && i < max)
 		i++;
 	if (str[i] == '0')
 		(*info)[1] = 1;
 	i = 0;
-	while (str[i] == '0' || (!ft_isdigit(str[i]) && str[i] != '.' &&
-			str[i] != 'h' && str[i] != 'l' && str[i] != 'j' &&
-			str[i] != 'z' && i < max))
+	while (str[i] == '0' || (!ft_isdigit(str[i]) && str[i] != '.'
+			&& str[i] != 'h' && str[i] != 'l' && str[i] != 'j'
+			&& str[i] != 'z' && i < max))
 		i++;
 	if (ft_isdigit(str[i]))
 		(*info)[5] = ft_atoi(&str[i]);
 	i = 0;
-	while (str[i] != '.' && str[i] != 'h' && str[i] != 'l' &&
-			str[i] != 'j' && str[i] != 'z' && i < max)
+	while (str[i] != '.' && str[i] != 'h' && str[i] != 'l'
+			&& str[i] != 'j' && str[i] != 'z' && i < max)
 		i++;
 	if (str[i] == '.')
 		(*info)[6] = (ft_atoi(&str[i + 1]));
@@ -46,8 +46,8 @@ static int		ft_printf_size(char *str, int max)
 	int			i;
 
 	i = 0;
-	while (str[i] != 'h' && str[i] != 'l' &&
-			str[i] != 'j' && str[i] != 'z' && i < max)
+	while (str[i] != 'h' && str[i] != 'l'
+			&& str[i] != 'j' && str[i] != 'z' && i < max)
 		i++;
 	if (str[i] == 'h' && str[i + 1] == 'h')
 		return (1);

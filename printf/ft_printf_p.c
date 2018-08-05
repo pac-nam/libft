@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 10:28:07 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 15:57:05 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/08/05 12:31:58 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ int				ft_printf_p(va_list ap, int *info)
 	info[0] = ft_strlen(ptr);
 	if (*ptr == '0')
 		return (ft_printf_p_zero(&ptr, info));
-	if (!ft_addncharbefore(info[6] - info[0], '0', &ptr) ||
-			!ft_addncharbefore(1, 'x', &ptr) ||
-			!ft_addncharbefore(1, '0', &ptr))
+	if (!ft_addncharbefore(info[6] - info[0], '0', &ptr)
+			|| !ft_addncharbefore(1, 'x', &ptr)
+			|| !ft_addncharbefore(1, '0', &ptr))
 		return (0);
 	count = 0;
 	info[6] = ft_strlen(ptr);
