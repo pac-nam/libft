@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/08/05 12:37:33 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/08/09 14:49:10 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,7 @@ STR_NAME	=	ft_strcat.c				\
 				ft_char_index.c			\
 				ft_strpbrk.c			\
 				ft_strrstr.c			\
+				ft_strrev.c				\
 
 LIST_NAME	=	ft_lstadd.c				\
 				ft_lstdel.c				\
