@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/08/09 14:49:10 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/08/22 12:36:40 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ MEMORY_NAME =	ft_memalloc.c			\
 				ft_realloc.c			\
 				ft_swap.c				\
 				ft_gnl.c				\
-				ft_addncharbefore.c     \
+				ft_addncharbefore.c		\
+				ft_memrev.c				\
 
 STR_NAME	=	ft_strcat.c				\
 				ft_strchr.c				\

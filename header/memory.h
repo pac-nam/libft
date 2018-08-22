@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 14:12:47 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/08/22 12:39:31 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int		ft_addncharbefore(int n, char c, char **str);
 void	ft_bzero(void *s, size_t n);
 void	ft_swap(int *a, int *b);
 void	ft_memdel(void **ap);
+void	ft_memrev(void *ptr, size_t size);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
