@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/08/22 12:39:31 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/10/08 12:48:15 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_gnl(const int fd, char **line);
 int		ft_addncharbefore(int n, char c, char **str);
+int		ft_flags(int ac, char **av, unsigned int *flags);
 void	ft_bzero(void *s, size_t n);
 void	ft_swap(int *a, int *b);
 void	ft_memdel(void **ap);
