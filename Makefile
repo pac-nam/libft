@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/10/08 10:29:02 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/10/23 13:48:46 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -154,19 +154,19 @@ $(NAME) : $(POINT_O) $(NAME).a
 %.a: $(POINT_O)
 	@ar rc $(NAME).a $(POINT_O)
 	@ranlib $(NAME).a
-	@printf '\n\033[32m[ ✔ ] %s\n\033[0m' "libft compiled"
+	@printf '\n\033[32m[ ✔ ] %s %s\n\033[0m' $(NAME) "compiled"
 
 %.o: %.c
 	@gcc -c $(FLAGS) $< -o $@
-	@printf '\x1b[42m%c\x1b[0m' " "
+	@printf '\x1b[42m%c\x1b[0m' "|"
 
 clean :
 	@/bin/rm -f $(POINT_O)
-	@printf '\033[33m[ ✔ ] %s\n\033[0m' "libft objects deleted"
+	@printf '\033[33m[ ✔ ] %s %s\n\033[0m' $(NAME) "objects deleted"
 
 fclean : clean
 	@/bin/rm -f $(NAME).a
-	@printf '\033[33m[ ✔ ] %s\n\033[0m' "libft deleted"
+	@printf '\033[33m[ ✔ ] %s %s\n\033[0m' $(NAME) "deleted"
 
 lib : all clean
 
