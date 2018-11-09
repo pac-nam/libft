@@ -6,16 +6,16 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 10:54:38 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 14:27:05 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/11/09 12:24:04 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "../header/memory.h"
 
 int		*ft_sort_int_tab(int *tab, size_t length)
 {
 	size_t	index;
+	int		tmp;
 
 	index = 0;
 	if (length < 2)
@@ -24,7 +24,9 @@ int		*ft_sort_int_tab(int *tab, size_t length)
 	{
 		if (tab[index] > tab[index + 1])
 		{
-			ft_swap(&tab[index], &tab[index + 1]);
+			tmp = tab[index];
+			tab[index] = tab[index + 1];
+			tab[index + 1] = tmp;
 			index = 0;
 		}
 		++index;
