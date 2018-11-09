@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:36:24 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/07/26 14:21:36 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/11/09 13:21:10 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,13 @@ char	*ft_strpbrk(const char *s, const char *charset)
 	int		i;
 	int		j;
 
-	j = 0;
-	while (charset[j])
+	j = -1;
+	while (s[++j])
 	{
-		i = 0;
-		while (s[i] && s[i] != charset[j])
-			++i;
-		if (s[i] == charset[j])
-			return ((char*)&s[i]);
-		++j;
+		i = -1;
+		while (charset[++i])
+			if (s[j] == charset[i])
+				return ((char*)&s[j]);
 	}
 	return (NULL);
 }

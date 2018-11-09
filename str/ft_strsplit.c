@@ -6,33 +6,24 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 16:59:30 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 16:26:46 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/11/09 13:42:13 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "../header/str.h"
 
 static int	ft_count_words(char const *s, char c)
 {
 	int		i;
 	int		count;
 
-	i = 0;
+	i = -1;
 	count = 0;
-	if (s[i] != c && s[i])
-		count++;
-	while (s[i] != c && s[i])
-		i++;
-	while (s[i] == c)
-	{
-		i++;
-		if (s[i] != c && s[i])
-		{
-			count++;
+	while (s[++i])
+		if (s[i] != c && s[i] && ++count)
 			while (s[i] != c && s[i])
 				i++;
-		}
-	}
 	return (count);
 }
 
@@ -42,18 +33,13 @@ static char	*ft_new_word(char const *str, char c)
 	int		j;
 	char	*dest;
 
-	i = 0;
-	j = 0;
-	while (str[i] != c && str[i])
-		i++;
-	if (!(dest = (char*)malloc((sizeof(char)) * (i + 1))))
+	i = ft_strlen_c(str, c) + 1;
+	j = -1;
+	if (!(dest = (char*)malloc(sizeof(char) * i--)))
 		return (NULL);
-	while (j < i)
-	{
-		dest[j] = str[j];
-		j++;
-	}
-	dest[j] = '\0';
+	dest[i] = '\0';
+	while (--i > -1)
+		dest[i] = str[i];
 	return (dest);
 }
 
@@ -64,17 +50,17 @@ char		**ft_strsplit(char const *s, char c)
 	int		j;
 	int		words;
 
-	if (!s)
+	if (!s || !c)
 		return (NULL);
 	words = ft_count_words(s, c);
 	if (!(big_tab = (char**)malloc(sizeof(char*) * (words + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (i < words && s[j])
+	while (i < words)
 	{
 		if (s[j] != c)
-			big_tab[i++] = ft_new_word(&s[j++], c);
+			big_tab[i++] = ft_new_word(&s[j], c);
 		while (s[j] != c && s[j])
 			j++;
 		while (s[j] == c)
