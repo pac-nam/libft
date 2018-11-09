@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/25 08:12:45 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 14:05:55 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/11/09 14:58:37 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,13 @@ void		ft_lstrev(t_list **begin_list)
 	int			cpt;
 	int			i;
 
-	cpt = ft_lstsize(*begin_list);
-	i = 0;
-	while (cpt > 0)
+	cpt = ft_lstsize(*begin_list) + 1;
+	while (--cpt > 0)
 	{
+		i = -1;
 		tmp = *begin_list;
 		begin_list = &tmp->next;
-		while (i < cpt)
-		{
+		while (++i < cpt)
 			tmp = tmp->next;
-			i++;
-		}
-		i = 0;
-		cpt--;
 	}
 }
