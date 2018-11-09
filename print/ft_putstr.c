@@ -6,15 +6,13 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:01:45 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 14:23:56 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/11/09 12:14:08 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "../header/str.h"
+#include "../header/print.h"
 
 void		ft_putstr(char const *str)
 {
-	if (str)
-		write(1, str, ft_strlen(str));
+	ft_putstr_fd(str, 1);
 }

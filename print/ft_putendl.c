@@ -6,18 +6,14 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 10:27:59 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 14:16:01 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/11/09 12:14:44 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "../header/str.h"
+#include "../header/print.h"
 
 void	ft_putendl(char const *s)
 {
-	if (s)
-	{
-		write(1, s, ft_strlen(s));
-		write(1, "\n", ft_strlen(s));
-	}
+	ft_putendl_fd(s, 1);
 }

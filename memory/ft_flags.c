@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/08 09:57:33 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/10/08 12:48:03 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/11/09 11:23:00 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		ft_flags(int ac, char **av, unsigned int *flags)
 	while (++i < ac && av[i][0] == '-')
 	{
 		j = 0;
-		while((c = av[i][++j]))
+		while ((c = av[i][++j]))
 		{
 			ft_putchar(c);
 			if (c < 'a' || c > 'z')
