@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 15:59:51 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 16:08:45 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/11/09 15:04:50 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int			ft_addncharbefore(int n, char c, char **str)
 
 	if (!str || !(*str))
 		return (0);
-	i = 0;
 	if (n < 1)
 		return (1);
 	len = ft_strlen(*str);
@@ -29,6 +28,7 @@ int			ft_addncharbefore(int n, char c, char **str)
 	if (!(*str = malloc(len + n + 1)))
 		return (0);
 	(*str)[len + n] = '\0';
+	i = 0;
 	while (i < n)
 		(*str)[i++] = c;
 	n = 0;

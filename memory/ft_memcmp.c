@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 12:32:37 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 16:10:26 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/11/09 15:40:16 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (*tmp1 != *tmp2)
 			return (*tmp1 - *tmp2);
-		if (n)
-		{
-			tmp1++;
-			tmp2++;
-		}
+		tmp1++;
+		tmp2++;
 	}
 	return (0);
 }

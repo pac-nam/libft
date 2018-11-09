@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 14:03:55 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 14:13:19 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/11/09 15:50:35 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,6 @@
 #include <unistd.h>
 #include "../header/memory.h"
 #include "../header/str.h"
-
-static size_t		ft_strlen_n(const char *str)
-{
-	size_t				i;
-
-	i = 0;
-	while (str[i] && str[i] != '\n')
-		i++;
-	return (i);
-}
 
 static int			ft_read_gnl(const int fd, char **str)
 {
@@ -37,11 +27,8 @@ static int			ft_read_gnl(const int fd, char **str)
 	while ((ret = read(fd, buf, GNL_BUFF_SIZE)) > 0)
 	{
 		buf[ret] = '\0';
-		if (!(*str))
-		{
-			if (!(*str = ft_strdup(buf)))
+		if (!*str && !(*str = ft_strdup(buf)))
 				return (-1);
-		}
 		else
 		{
 			tmp = *str;
@@ -61,15 +48,15 @@ int					ft_gnl(const int fd, char **line)
 	char			*tmp;
 	int				ret;
 
-	if (fd < 0 || !line || (ret = ft_read_gnl(fd, (&str))) == -1)
+	if (fd < 0 || !line || (ret = ft_read_gnl(fd, (&str))) < 0)
 		return (-1);
 	if (ret == 0 && !(str))
 		return (0);
-	if (!(*line = ft_strsub(str, 0, ft_strlen_n(str))))
+	if (!(*line = ft_strsub(str, 0, ft_strlen_c(str, '\n'))))
 		return (-1);
 	tmp = str;
-	if (!(str = ft_strsub(tmp, ft_strlen_n(tmp) + 1,
-					(ft_strlen(tmp) - ft_strlen_n(tmp)))))
+	if (!(str = ft_strsub(tmp, ft_strlen_c(tmp, '\n') + 1,
+					(ft_strlen(tmp) - ft_strlen_c(tmp, '\n')))))
 		return (-1);
 	ft_strdel(&tmp);
 	if (str[0] == '\0')
