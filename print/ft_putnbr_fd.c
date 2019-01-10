@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:09:01 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/11/09 12:08:00 by tbleuse          ###   ########.fr       */
+/*   Updated: 2019/01/10 12:02:56 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,4 @@ void		ft_putnbr_fd(int nb, int fd)
 		nb = nb / 10;
 	}
 	write(fd, str, len_to_write);
-}
-
-int		main(void)
-{
-	ft_putnbr_fd(5465165, 1);
-	return (0);
 }
