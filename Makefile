@@ -23,6 +23,8 @@ CONV_NAME	=	ft_atoi.c				\
 				ft_wc_convert.c			\
 				ft_wcs_convert.c		\
 				ft_conv_utf8.c			\
+				ft_intlen_base.c		\
+				ft_intlen.c			\
 
 CHAR_NAME	=	ft_isalnum.c			\
 				ft_isalpha.c			\
@@ -85,6 +87,8 @@ STR_NAME	=	ft_strcat.c				\
 				ft_strpbrk.c			\
 				ft_strrstr.c			\
 				ft_strrev.c				\
+				ft_strcapitalize.c		\
+				ft_strlowerize.c		\
 
 LIST_NAME	=	ft_lstadd.c				\
 				ft_lstdel.c				\
