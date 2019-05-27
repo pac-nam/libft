@@ -14,12 +14,14 @@
 #include "../header/libft.h"
 
 
-void		ft_printmemory(const unsigned char *str, int length)
+void		ft_printmemory(void *ptr, int length)
 {
-	char	to_print[length*3];
-	char	*base;
-	int		i;
+	unsigned char	*str;
+	char			to_print[length*3];
+	char			*base;
+	int				i;
 
+	str = (unsigned char*)ptr;
 	base = "0123456789ABCDEF";
 	i = -1;
 	while (++i < length)

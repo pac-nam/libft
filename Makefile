@@ -17,6 +17,7 @@ FLAGS = -Wall -Wextra -Werror
 CONV_NAME	=	ft_atoi.c				\
 				ft_atoll.c				\
 				ft_itoa.c				\
+				ft_dtoa.c				\
 				ft_itoa_base.c			\
 				ft_lltoa.c              \
 				ft_ulltoa_base.c        \
@@ -110,6 +111,7 @@ PRINT_NAME	=	ft_putchar.c			\
 				ft_putstr.c				\
 				ft_putstr_fd.c			\
 				ft_printnchar.c         \
+				ft_printmemory.c        \
 
 MATH_NAME	=	ft_bracket.c			\
 				ft_sqrt.c				\

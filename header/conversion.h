@@ -18,6 +18,7 @@
 int			ft_atoi(const char *str);
 long long	ft_atoll(const char *str);
 char		*ft_itoa(int n);
+char		*ft_dtoa(double n);
 char		*ft_itoa_base(int n, int base);
 char		*ft_lltoa(long long n);
 char		*ft_ulltoa_base(unsigned long long n, int base);
