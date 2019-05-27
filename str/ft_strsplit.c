@@ -30,11 +30,9 @@ static int	ft_count_words(char const *s, char c)
 static char	*ft_new_word(char const *str, char c)
 {
 	int		i;
-	int		j;
 	char	*dest;
 
 	i = ft_strlen_c(str, c) + 1;
-	j = -1;
 	if (!(dest = (char*)malloc(sizeof(char) * i--)))
 		return (NULL);
 	dest[i] = '\0';
