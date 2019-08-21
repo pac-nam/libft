@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putaddr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 10:41:46 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/11/09 15:18:01 by tbleuse          ###   ########.fr       */
+/*   Created: 2018/01/17 16:44:15 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/11/09 12:16:48 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-void		ft_bzero(void *s, size_t n)
+void    ft_putaddr(void *ptr)
 {
-	unsigned char	*s2;
+    unsigned long long  cpy;
+    int                 index;
+    char                str[16];
 
-	n++;
-	s2 = s;
-	while (n > 1)
-		s2[--n - 1] = 0;
+    cpy = (unsigned long)ptr;
+    str[0] = '0';
+    str[1] = 'x';
+    index = 14;
+    while (--index > 1)
+    {
+        str[index] = (cpy % 16) + '0';
+        if (str[index] > '9')
+            str[index] += 7;
+        cpy = cpy / 16;
+    }
+    write(1, str, 14);
 }
