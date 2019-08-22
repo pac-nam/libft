@@ -14,12 +14,10 @@
 **	0........................25
 **	abcdefghijklmnopqrstuvwxyz
 **
-**	index after the last flag string is returned
-**	-index is returned in case of  double flag
-**	0 is returned in case of error
+**	Index after the last flag string is returned.
+**	Index is returned negative in case of  double flag.
+**	0 is returned in case of error.
 */
-
-#include "libft.h"
 
 int		ft_flags(int ac, char **av, unsigned int *flags)
 {

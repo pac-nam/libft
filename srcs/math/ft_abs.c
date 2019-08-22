@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_abs return absolute value of the integer passed in parameter.
+*/
+
 int	ft_abs(int nb)
 {
 	if (nb < 0)

@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_isdigit return 1 if the integer passed is a digit, 0 elseway.
+*/
+
 int		ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')

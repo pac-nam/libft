@@ -12,6 +12,11 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_memchr return the address of the first occurence of byte c in s,
+**	or the size n is reached.
+*/
+
 void		*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char		*tmp;

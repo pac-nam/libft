@@ -13,6 +13,13 @@
 #include <stdlib.h>
 #include "memory.h"
 
+/*
+**	ft_memalloc return pointer with allocation of the size passed in parameter
+**	and initialise it to 0.
+**	WARNING: ft_itoa use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
+
 void		*ft_memalloc(size_t size)
 {
 	void	*locate;

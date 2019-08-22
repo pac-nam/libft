@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_swap exchange the values in the pointers.
+*/
+
 void	ft_swap(int *a, int *b)
 {
 	int c;

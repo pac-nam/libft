@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_atoll take a string in parameter and convert it to long long.
+**	If the string does not start with digit, '+' or '-', 0 is returned.
+**	If in the string there is a non digit charactere, ft_atoll will stop.
+**	Be careful, ft_atoll can overflow.
+*/
+
 long long		ft_atoll(const char *str)
 {
 	long long		nb;

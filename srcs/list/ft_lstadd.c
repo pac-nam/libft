@@ -12,6 +12,10 @@
 
 #include "list.h"
 
+/*
+**	ft_lstadd add the new element on the first place of the list.
+*/
+
 void	ft_lstadd(t_list **alst, t_list *new)
 {
 	if (alst == NULL)

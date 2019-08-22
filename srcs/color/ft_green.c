@@ -14,6 +14,12 @@
 #include "colors.h"
 #include "str.h"
 
+/*
+**	ft_green will write the string passed in green in the standar output.
+**	3 syscall have been used to avoid the use of malloc, but it is not
+**	optimized.
+*/
+
 void	ft_green(char const *s)
 {
 	if (s)

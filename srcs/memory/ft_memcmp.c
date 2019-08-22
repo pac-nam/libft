@@ -12,6 +12,11 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_memcmp return the difference of the first different byte
+**	between s1 and s2, or 0 if the size n is reached.
+*/
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*tmp1;

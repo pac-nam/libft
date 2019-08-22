@@ -12,6 +12,10 @@
 
 #include "conversion.h"
 
+/*
+**	ft_intlen_base return the length of the value passed in base 10.
+*/
+
 int		ft_intlen(int value)
 {
 	return ft_intlen_base(value, 10);

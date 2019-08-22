@@ -15,6 +15,8 @@
 
 # include <wchar.h>
 
+# define HEXA "0123456789abcdef"
+
 int			ft_atoi(const char *str);
 long long	ft_atoll(const char *str);
 char		*ft_itoa(int n);
@@ -28,5 +30,6 @@ int			ft_wc_convert(char *s, wchar_t wchar);
 int			ft_wcs_convert(char *s, wchar_t *pwcs, int n);
 int			ft_intlen_base(int value, int base);
 int			ft_intlen(int value);
+int         ft_lllen(long long value);
 
 #endif

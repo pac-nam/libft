@@ -12,6 +12,10 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_bzero write len c from the pointer.
+*/
+
 void		*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*b2;

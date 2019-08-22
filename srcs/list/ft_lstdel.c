@@ -12,6 +12,10 @@
 
 #include "list.h"
 
+/*
+**	ft_lstdel delete the last element of the list.
+*/
+
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	if (alst == NULL)

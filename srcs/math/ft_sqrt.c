@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_sqrt return the square root of the number passed in parameter rounded up.
+*/
+
 int		ft_sqrt(int nb)
 {
 	int		x;

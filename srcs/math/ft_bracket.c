@@ -10,18 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_brackets verify the consistency of the brackets.
+**	return 1 if it is valid, 0 elseway.
+**	WARNING: To optimize the function, the allowed size of the stack is 128.
+**	WARNING: ft_brackets can crash if the expression are too heavy.
+*/
+
 static int		ft_bracket_charcmp(char c1, char c2)
 {
-	if ((c1 == '(' && c2 == ')')
+	return ((c1 == '(' && c2 == ')')
 			|| (c1 == '{' && c2 == '}')
-			|| (c1 == '[' && c2 == ']'))
-		return (1);
-	return (0);
+			|| (c1 == '[' && c2 == ']'));
 }
 
 int				ft_brackets(char *str)
 {
-	int		tab[100];
+	int		tab[128];
 	int		i;
 
 	tab[0] = 0;
@@ -35,7 +40,5 @@ int				ft_brackets(char *str)
 				return (0);
 		++i;
 	}
-	if (tab[0] != 0)
-		return (0);
-	return (1);
+	return (tab[0] == 0);
 }

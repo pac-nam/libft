@@ -12,6 +12,12 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_memccpy return a copy of the src before the byte c is find in it,
+**	or the size n is reached.
+**	WARNING: destination need sufficient space.
+*/
+
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	size_t					i;

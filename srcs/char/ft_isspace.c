@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_isspace return 1 if the integer passed is a space, 0 elseway.
+*/
+
 int		ft_isspace(int c)
 {
 	if (c == '\t' || c == '\n' || c == '\v'

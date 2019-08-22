@@ -10,14 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_power(int nb, int power)
+/*
+**	ft_power return the number to the power passed in parameter.
+**	WARNING: ft_power can overflow.
+*/
+
+int		ft_power(int number, int power)
 {
 	int		save;
 
-	save = nb;
+	save = number;
 	if (power < 1)
 		return (1);
 	while (power-- > 1)
-		nb = nb * save;
-	return (nb);
+		number = number * save;
+	return (number);
 }

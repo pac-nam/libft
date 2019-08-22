@@ -12,6 +12,11 @@
 
 #include "list.h"
 
+/*
+**	ft_lstiter apply the function passed in parameter on
+**	each element of the list.
+*/
+
 void		ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	if (lst == NULL)

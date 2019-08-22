@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	If a lower letter is passed to ft_tolower, the letter is capitalized.
+**	Elseway, the integer passed in argument is returned.
+*/
+
 int		ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')

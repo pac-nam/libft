@@ -12,14 +12,20 @@
 
 #include "list.h"
 
+/*
+**	ft_lstmap apply the function passed in parameter on a copy of
+**	each element a the list. The first element of this copy is returned.
+**	WARNING: ft_itoa use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
+
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*new_elem;
 
 	if (lst == NULL)
 		return (NULL);
-	new_elem = (t_list*)malloc(sizeof(t_list));
-	if (new_elem == NULL)
+	if (!(new_elem = (t_list*)malloc(sizeof(t_list))))
 		return (NULL);
 	new_elem = (f)(lst);
 	if (lst->next != NULL)

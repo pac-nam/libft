@@ -12,6 +12,10 @@
 
 #include "list.h"
 
+/*
+**	ft_lstrev reverse element in the list passed in parameter.
+*/
+
 void		ft_lstrev(t_list **begin_list)
 {
 	t_list		*tmp;

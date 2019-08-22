@@ -12,28 +12,21 @@
 
 #include <stdlib.h>
 #include "str.h"
+#include "conversion.h"
 
-static int	ft_int_lenght(int nb)
-{
-	int		lenght;
-
-	lenght = 0;
-	if (nb <= 0)
-		lenght = 1;
-	while (nb != 0)
-	{
-		nb = nb / 10;
-		lenght++;
-	}
-	return (lenght);
-}
+/*
+**	ft_itoa take return a string containing the value passed in parameter
+**	in base 10.
+**	WARNING: ft_itoa use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
 
 char		*ft_itoa(int n)
 {
 	char	*str;
 	int		i;
 
-	i = ft_int_lenght(n);
+	i = ft_intlen(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (!(str = (char*)malloc(i + 1)))

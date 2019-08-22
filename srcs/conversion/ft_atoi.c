@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_atoi take a string in parameter and convert it to integer.
+**	If the string does not start with digit, '+' or '-', 0 is returned.
+**	If in the string there is a non digit charactere, ft_atoi will stop.
+**	Be careful, ft_atoi can overflow.
+*/
+
 int		ft_atoi(const char *str)
 {
 	int		nb;

@@ -13,7 +13,12 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_formatfloat(int isnegative, long exposant, long mantisse)
+/*
+**	ft_dtoa is a work in progress and is unstable.
+**	Do not use it.
+*/
+
+static char	*ft_formatfloat(int isnegative, long exposant, long mantisse)
 {
 	isnegative = isnegative;
 	exposant = exposant;
@@ -21,7 +26,7 @@ char	*ft_formatfloat(int isnegative, long exposant, long mantisse)
 	return (ft_itoa(mantisse));
 }
 
-long	ft_getbits(const unsigned char *n, int start, int end)
+static long	ft_getbits(const unsigned char *n, int start, int end)
 {
 	int		charindex;
 	int		insideindex;

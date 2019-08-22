@@ -31,6 +31,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memalloc(size_t size);
-void	*ft_realloc(void *ptr, size_t size);
 
 #endif

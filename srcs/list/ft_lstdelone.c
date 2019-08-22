@@ -12,11 +12,18 @@
 
 #include "list.h"
 
+/*
+**	ft_lstdelone delete the first element of the list.
+*/
+
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	if (alst == NULL)
+	t_list	*tmp;
+	
+	if (alst == NULL || *alst == NULL)
 		return ;
+	tmp = (*alst)->next;
 	(del)((*alst)->content, (*alst)->content_size);
 	free(*alst);
-	*alst = NULL;
+	*alst = tmp;
 }

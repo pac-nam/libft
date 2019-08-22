@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_isxdigit return 1 if the integer passed is valid in hexadecimal notation,
+**	0 elseway. Reminder: hexa="0123456789ABCDEF" also lowercase is valid.
+*/
+
 int		ft_isxdigit(int c)
 {
 	if ((c >= '0' && c <= '9')

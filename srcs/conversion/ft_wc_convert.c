@@ -12,6 +12,13 @@
 
 #include "conversion.h"
 
+/*
+**	ft_wc_convert take the destination, the unicode charactere and put the
+**	charactere in the string.
+**	The size of the charactere is returned. or -1 if an error occur
+**	The destination have to be allocated with sufficient size.
+*/
+
 int			ft_wc_convert(char *s, wchar_t wchar)
 {
 	if ((wchar < 0) || (wchar >= 0xD800 && wchar <= 0xDFFF) ||

@@ -16,7 +16,7 @@
 int		ft_random(void);
 int		ft_sqrt(int nb);
 int		ft_bracket(char *str);
-int		ft_power(int nb, int power);
+int		ft_power(int number, int power);
 int		*ft_sort_int_tab(int *tab, size_t length);
 int		ft_abs(int nb);
 

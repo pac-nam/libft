@@ -12,6 +12,10 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_bzero write n 0 from s.
+*/
+
 void		ft_bzero(void *s, size_t n)
 {
 	unsigned char	*s2;

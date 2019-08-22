@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_isprint return 1 if the integer passed can be printed, 0 elseway.
+**	"space" (32) is a printable ascii code
+*/
+
 int		ft_isprint(int c)
 {
 	if (c > 31 && c < 127)

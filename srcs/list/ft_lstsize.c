@@ -12,6 +12,10 @@
 
 #include "list.h"
 
+/*
+**	ft_lstsize return the number of element in the list passed in parameter.
+*/
+
 int		ft_lstsize(t_list *begin_list)
 {
 	t_list	*tmp;

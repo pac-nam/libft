@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_iscntrl return 1 if the integer passed is a control ascii code,
+**	0 elseway.
+*/
+
 int		ft_iscntrl(int c)
 {
 	if ((c >= 0 && c < 8)

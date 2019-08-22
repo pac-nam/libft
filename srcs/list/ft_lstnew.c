@@ -13,6 +13,12 @@
 #include "memory.h"
 #include "list.h"
 
+/*
+**	ft_lstnew create a new element of type t_list. The content is allocated.
+**	WARNING: ft_itoa use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
+
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list			*link;

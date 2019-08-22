@@ -12,6 +12,10 @@
 
 #include "list.h"
 
+/*
+**	ft_lstpushback add the new element on the last place of the list.
+*/
+
 void		ft_lstpushback(t_list **begin, void *data, size_t size)
 {
 	t_list		*tmp;

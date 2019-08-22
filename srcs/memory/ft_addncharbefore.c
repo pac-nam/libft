@@ -13,6 +13,11 @@
 #include <stdlib.h>
 #include "str.h"
 
+/*
+**	ft_addncharbefore add n times the charactere passed in parameter
+**	before the string passed in parameter (by address).
+*/
+
 int			ft_addncharbefore(int n, char c, char **str)
 {
 	char		*tmp;

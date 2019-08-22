@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_isascii return 1 if the integer passed can be used as ascii, 0 elseway.
+*/
+
 int		ft_isascii(int c)
 {
 	if (c >= 0 && c < 128)

@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_isalpha return 1 if the integer passed is a letter uppercase or
+**	lowercase, 0 elseway.
+*/
+
 int		ft_isalpha(int c)
 {
 	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));

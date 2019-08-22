@@ -1,3 +1,8 @@
+
+/*
+**	ft_memcpy copy the n first byte from src to dst.
+**	WARNING: destination need sufficient space.
+*/
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -11,6 +16,10 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
+/*
+**	ft_memdel free the pointer and set it to 0 if it is pointing on NULL.
+*/
 
 void	ft_memdel(void **ap)
 {

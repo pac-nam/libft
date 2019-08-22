@@ -14,6 +14,10 @@
 #include <stdio.h>
 #include <time.h>
 
+/*
+**	ft_random return a pseudo-random number.
+*/
+
 int	ft_random(void)
 {
 	static int	first = 0;

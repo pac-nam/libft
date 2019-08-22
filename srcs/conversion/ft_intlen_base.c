@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_intlen_base return the length of the value passed
+**	using the base passed in parametre.
+**	If value is less than 0 and base is not 10, 0 is returned.
+*/
+
 int		ft_intlen_base(int value, int base)
 {
 	int	len;

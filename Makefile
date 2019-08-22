@@ -35,6 +35,7 @@ CONV_NAME	=	ft_atoi.c				\
 				ft_conv_utf8.c			\
 				ft_intlen_base.c		\
 				ft_intlen.c				\
+				ft_lllen.c				\
 
 CHAR_FOLDER = char
 CHAR_NAME	=	ft_isalnum.c			\
@@ -59,7 +60,6 @@ MEMORY_NAME =	ft_memalloc.c			\
 				ft_memmove.c			\
 				ft_memset.c				\
 				ft_bzero.c				\
-				ft_realloc.c			\
 				ft_swap.c				\
 				ft_gnl.c				\
 				ft_addncharbefore.c		\

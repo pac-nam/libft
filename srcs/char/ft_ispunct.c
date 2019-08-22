@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_ispunct return 1 if the integer passed is a punctuation, 0 elseway.
+*/
+
 int		ft_ispunct(int c)
 {
 	if ((c > 40 && c < 48)

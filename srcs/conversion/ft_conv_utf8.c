@@ -12,6 +12,13 @@
 
 #include "conversion.h"
 
+/*
+**	ft_conv_utf8 take the size of the utf8, the utf8 charactere
+**	and the destination. and put the charactere in the string.
+**	the size of the charactere is returned.
+**	The destination have to be allocated with sufficient size.
+*/
+
 int		ft_conv_utf8(int wbytes, wchar_t wchar, char *s)
 {
 	if (wbytes == 2)

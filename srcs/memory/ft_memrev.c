@@ -12,6 +12,10 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_memrev reverse n byte from the pointer.
+*/
+
 void		*ft_memrev(void *ptr, size_t size)
 {
 	size_t		i;

@@ -16,6 +16,15 @@
 #include "memory.h"
 #include "str.h"
 
+/*
+**	ft_gnl read a file and return it line by line on each call.
+**	Do not use it on multiple file descriptor at the same time.
+**	1 is returned if gnl succes.
+**	0 is returned if the end of file is reached.
+**	-1 is returned in case of error.
+**	WARNING: ft_gnl use malloc. So it need to be free to avoid leaks.
+*/
+
 static int			ft_read_gnl(const int fd, char **str)
 {
 	char				buf[GNL_BUFF_SIZE + 1];

@@ -12,6 +12,11 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_sort_int_tab the integer array sorted by increasing order.
+**	the sort used is a bubble sort. It is not optimized.
+*/
+
 int		*ft_sort_int_tab(int *tab, size_t length)
 {
 	size_t	index;

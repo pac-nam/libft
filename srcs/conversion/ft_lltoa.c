@@ -13,28 +13,21 @@
 #include <limits.h>
 #include <stdlib.h>
 #include "str.h"
+#include "conversion.h"
 
-static int	ft_nb_lenght(long long nb)
-{
-	int		lenght;
-
-	lenght = 0;
-	if (nb <= 0)
-		lenght = 1;
-	while (nb != 0)
-	{
-		nb = nb / 10;
-		lenght++;
-	}
-	return (lenght);
-}
+/*
+**	ft_lltoa take return a string containing the value passed in parameter
+**	in base 10.
+**	WARNING: ft_itoa use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
 
 char		*ft_lltoa(long long n)
 {
 	char	*str;
 	int		i;
 
-	i = ft_nb_lenght(n);
+	i = ft_lllen(n);
 	if (n == LLONG_MIN)
 		return (ft_strdup("-9223372036854775808"));
 	if (!(str = (char*)malloc(sizeof(*str) * (i + 1))))

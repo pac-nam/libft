@@ -12,6 +12,12 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_memmove copy n byte from src to dst.
+**	ft_memmovec can not overlap.
+**	WARNING: Destination need sufficient space.
+*/
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*src2;
