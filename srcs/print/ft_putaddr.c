@@ -12,6 +12,10 @@
 
 #include <unistd.h>
 
+/*
+**	print the pointer address.
+*/
+
 void    ft_putaddr(void *ptr)
 {
     unsigned long long  cpy;

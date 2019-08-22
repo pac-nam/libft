@@ -12,6 +12,10 @@
 
 #include "print.h"
 
+/*
+**	print the string s on the standard output.
+*/
+
 void		ft_putstr(char const *str)
 {
 	ft_putstr_fd(str, 1);

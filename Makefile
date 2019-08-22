@@ -137,7 +137,7 @@ MATH_NAME	=	ft_bracket.c			\
 				ft_abs.c				\
 
 PRINTF_FOLDER = printf
-#PRINTF_NAME	=	ft_printf.c				\
+PRINTF_NAME	=	ft_printf.c				\
 				ft_m_count.c            \
 				ft_last_char.c          \
 				ft_take_infos.c         \

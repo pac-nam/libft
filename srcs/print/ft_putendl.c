@@ -10,8 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "print.h"
+
+/*
+**	print the string s on the standard output
+**	followed by carriage return (\n).
+*/
 
 void	ft_putendl(char const *s)
 {

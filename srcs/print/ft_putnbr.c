@@ -12,6 +12,10 @@
 
 #include "print.h"
 
+/*
+**	print the string s on the standard output.
+*/
+
 void	ft_putnbr(int nb)
 {
 	ft_putnbr_fd(nb, 1);

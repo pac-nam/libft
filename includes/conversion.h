@@ -15,7 +15,7 @@
 
 # include <wchar.h>
 
-# define HEXA "0123456789abcdef"
+# define HEXA "0123456789ABCDEF"
 
 int			ft_atoi(const char *str);
 long long	ft_atoll(const char *str);

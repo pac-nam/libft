@@ -10,23 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <unistd.h>
-#include "str.h"
+
+/*
+**	print nb times the character c.
+*/
 
 int		ft_printnchar(int nb, char c)
 {
-	char		*str;
+	char		str[nb];
 	int			nb2;
 
 	if (nb < 1)
-		return (0);
-	if (!(str = (char*)malloc(nb)))
 		return (0);
 	nb2 = nb;
 	while (nb-- > 0)
 		str[nb] = c;
 	write(1, str, nb2);
-	ft_strdel(&str);
 	return (nb2);
 }

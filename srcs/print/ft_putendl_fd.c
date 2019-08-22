@@ -13,6 +13,11 @@
 #include <unistd.h>
 #include "str.h"
 
+/*
+**	print the string s on the file descriptor fd
+**	followed by carriage return (\n).
+*/
+
 void	ft_putendl_fd(char const *s, int fd)
 {
 	if (s)

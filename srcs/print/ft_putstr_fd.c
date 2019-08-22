@@ -13,6 +13,10 @@
 #include <unistd.h>
 #include "str.h"
 
+/*
+**	print the string s on the file descriptor fd.
+*/
+
 void	ft_putstr_fd(char const *s, int fd)
 {
 	if (s)

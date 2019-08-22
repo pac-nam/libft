@@ -13,6 +13,10 @@
 #include <unistd.h>
 #include "print.h"
 
+/*
+**	print the number nb on the file descriptor fd.
+*/
+
 static int	ft_special_putnbr(int nb, int fd)
 {
 	if (nb > -1 && nb < 10)

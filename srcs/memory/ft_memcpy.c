@@ -13,7 +13,7 @@
 #include <stdlib.h>
 
 /*
-**	ft_memcpy copy the n byte from src to dst.
+**	ft_memcpy copy the n bytes from src to dst.
 **	If src and dst are close, use ft_memmove to avoid overlap.
 **	WARNING: Destination need sufficient space.
 */

@@ -13,7 +13,7 @@
 #include <stdlib.h>
 
 /*
-**	ft_memrev reverse n byte from the pointer.
+**	ft_memrev reverse n bytes from the pointer.
 */
 
 void		*ft_memrev(void *ptr, size_t size)

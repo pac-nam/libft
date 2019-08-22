@@ -13,7 +13,7 @@
 #include <stdlib.h>
 
 /*
-**	ft_memmove copy n byte from src to dst.
+**	ft_memmove copy n bytes from src to dst.
 **	ft_memmovec can not overlap.
 **	WARNING: Destination need sufficient space.
 */
