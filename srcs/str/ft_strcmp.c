@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_strcmp return the difference of the first different character
+**	between s1 and s2, or 0 if s1 and s2 are the same.
+*/
+
 int		ft_strcmp(const char *s1, const char *s2)
 {
 	int		i;

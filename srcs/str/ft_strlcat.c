@@ -13,6 +13,12 @@
 #include "memory.h"
 #include "str.h"
 
+/*
+**	ft_strlcat concatenate src after dst. with a maximum length of size.
+**	dst will alway finish with a '\0'.
+**	ft_strlcat is not clear. Prefer use something else.
+*/
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;

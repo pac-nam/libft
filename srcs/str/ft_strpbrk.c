@@ -12,6 +12,12 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_strpbrk search in the string str the first occurence
+**	of a character from charset, and return it address.
+**	ft_strpbrk return NULL if no occurence of charset is found.
+*/
+
 char	*ft_strpbrk(const char *s, const char *charset)
 {
 	int		i;

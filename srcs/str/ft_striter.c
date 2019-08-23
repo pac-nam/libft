@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_striter apply the function passed in parameter on
+**	each character of the string s.
+*/
+
 void		ft_striter(char *s, void (*f)(char *))
 {
 	if (s && f)

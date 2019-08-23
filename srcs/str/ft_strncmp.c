@@ -12,6 +12,11 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_strncmp return the difference of the first different character between
+**	the n first characters of s1 and s2, or 0 if s1 and s2 are the same.
+*/
+
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

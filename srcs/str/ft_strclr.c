@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_strclr initialise all characters of the string s to 0.
+*/
+
 void		ft_strclr(char *s)
 {
 	if (s)

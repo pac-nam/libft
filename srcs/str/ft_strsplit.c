@@ -13,6 +13,13 @@
 #include <stdlib.h>
 #include "str.h"
 
+/*
+**	ft_strsplit split the string passed in parameter by the character c and
+**	return a string array of it.
+**	WARNING: ft_strsplit use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
+
 static int	ft_count_words(char const *s, char c)
 {
 	int		i;

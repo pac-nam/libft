@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_char_index search in the string str the first occurence
+**	of the charactere c, and return it index.
+**	ft_char_index return -1 if the character c is not found.
+*/
+
 int			ft_char_index(const char *str, char c)
 {
 	int		i;

@@ -12,6 +12,12 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_strnstr return a pointer of the first occurence of the string needle
+**	in the first len characters of haystack is returned or NULL if needle is
+**	not found.
+*/
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t			i;

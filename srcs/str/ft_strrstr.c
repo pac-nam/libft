@@ -13,6 +13,11 @@
 #include <stdlib.h>
 #include "str.h"
 
+/*
+**	ft_strrstr A pointer of the last occurence of the string needle in
+**	the haystack is returned or NULL if needle is not found.
+*/
+
 char	*ft_strrstr(const char *haystack, const char *needle)
 {
 	int				i;

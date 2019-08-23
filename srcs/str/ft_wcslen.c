@@ -12,6 +12,10 @@
 
 #include <wchar.h>
 
+/*
+**	ft_strlen return the length of the unicode string passed in parameter.
+*/
+
 size_t		ft_wcslen(wchar_t *str)
 {
 	size_t		i;

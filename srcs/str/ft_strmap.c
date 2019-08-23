@@ -11,21 +11,25 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "str.h"
+
+/*
+**	ft_strmap apply the function passed in parameter on
+**	each character of a copy of the string s. The copy is returned.
+**	WARNING: ft_strmap use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
 
 char		*ft_strmap(char const *s, char (*f)(char))
 {
-	char	*dest;
-	int		i;
+	char				*dest;
+	unsigned int		i;
 
-	i = 0;
-	if (!s)
+	if (!s || !(dest = ft_strdup(s)))
 		return (NULL);
-	while (s[i])
-		i++;
-	if (!(dest = (char*)malloc(i + 1)))
-		return (NULL);
-	dest[i] = '\0';
-	while (--i >= 0)
+	i = -1;
+	while (s[++i])
 		dest[i] = f(s[i]);
+	dest[i] = '\0';
 	return (dest);
 }

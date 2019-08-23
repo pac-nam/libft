@@ -12,6 +12,13 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_strnew return pointer with allocation of the size passed in parameter
+**	and initialise it to 0.
+**	WARNING: ft_strnew use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
+
 char		*ft_strnew(size_t size)
 {
 	char	*str;

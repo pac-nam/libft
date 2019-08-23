@@ -12,6 +12,11 @@
 
 #include "str.h"
 
+/*
+**	ft_strnequ return 1 if the n first characters of s1 and s2 are identical.
+**	return 0 elseway.
+*/
+
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	if (!s1 || !s2)

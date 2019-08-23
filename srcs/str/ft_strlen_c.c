@@ -12,6 +12,11 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_strlen_c return the number of characters until c
+**	or the length of the string if c is not found.
+*/
+
 size_t		ft_strlen_c(const char *str, char c)
 {
 	int			i;

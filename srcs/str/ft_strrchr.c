@@ -12,6 +12,12 @@
 
 #include "str.h"
 
+/*
+**	ft_strchr search in the string str the last occurence
+**	of the charactere c, and return it address.
+**	ft_strchr return NULL if the character c is not found.
+*/
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int		i;

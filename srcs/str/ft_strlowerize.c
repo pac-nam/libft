@@ -12,6 +12,10 @@
 
 #include "char.h"
 
+/*
+**	ft_strlowerize lowerize the string passed in parameter and return it.
+*/
+
 char		*ft_strlowerize(char *str)
 {
 	int		x;

@@ -12,6 +12,10 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_strlen return the length of the string passed in parameter.
+*/
+
 size_t		ft_strlen(const char *str)
 {
 	size_t		x;

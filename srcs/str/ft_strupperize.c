@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strupperize.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:12:41 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 16:18:36 by tbleuse          ###   ########.fr       */
+/*   Created: 2017/11/08 11:47:32 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/03/21 16:20:13 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "str.h"
+#include "char.h"
 
 /*
-**	ft_strequ return 1 if s1 and s2 are identical. 0 elseway.
+**	ft_strupperize upperize the string passed in parameter and return it.
 */
 
-int		ft_strequ(char const *s1, char const *s2)
+char		*ft_strupperize(char *str)
 {
-	if (!s1 || !s2)
-		return (0);
-	return (!(ft_strcmp(s1, s2)));
+	int		x;
+
+	x = -1;
+	while (str[++x])
+		str[x] = ft_toupper(str[x]);
+	return (str);
 }

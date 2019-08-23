@@ -13,12 +13,18 @@
 #include <stdlib.h>
 #include "str.h"
 
+/*
+**	ft_strdup duplicate the string s1.
+**	If src and dst are close, use ft_memmove to avoid overlap.
+**	WARNING: ft_strdup use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
+
 char	*ft_strdup(const char *s1)
 {
 	char	*str;
 
 	if (!(str = (char*)malloc(ft_strlen(s1) + 1)))
 		return (NULL);
-	str = ft_strcpy(str, s1);
-	return (str);
+	return ft_strcpy(str, s1);
 }

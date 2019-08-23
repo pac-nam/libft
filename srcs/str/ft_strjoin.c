@@ -13,22 +13,21 @@
 #include <stdlib.h>
 #include "str.h"
 
+/*
+**	ft_strcat concatenate the string s2 after the string s1.
+**	Without modifying s1 or s2. A pointer on the new sting is returned.
+**	WARNING: ft_strjoin use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
+
 char		*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
 	char	*str;
 
-	i = -1;
-	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
 	if (!(str = (char*)malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
 		return (NULL);
-	while (s1[++i])
-		str[i] = s1[i];
-	while (s2[j])
-		str[i++] = s2[j++];
-	str[i] = '\0';
-	return (str);
+	ft_strcpy(str, s1);
+	return ft_strcat(str, s2);
 }

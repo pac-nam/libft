@@ -12,6 +12,12 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_strncpy copy the len first characters from src to dest.
+**	WARNING: src and dst can overlap.
+**	WARNING: destination need sufficient space.
+*/
+
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t		x;

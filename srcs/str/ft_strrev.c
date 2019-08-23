@@ -12,6 +12,10 @@
 
 #include "str.h"
 
+/*
+**	ft_lstrev reverse characters in the string passed in parameter.
+*/
+
 char		*ft_strrev(char *str)
 {
 	int		i;

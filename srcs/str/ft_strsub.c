@@ -12,6 +12,13 @@
 
 #include <stdlib.h>
 
+/*
+**	ft_strsub return a copy of the len characters from the start index of the
+**	string s.
+**	WARNING: ft_strsub use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
+
 char		*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;

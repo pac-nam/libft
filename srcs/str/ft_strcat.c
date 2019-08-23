@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	ft_strcat concatenate the string s2 after the string s1.
+**	WARNING: s1 need sufficient space.
+*/
+
 char	*ft_strcat(char *s1, const char *s2)
 {
 	int		i;

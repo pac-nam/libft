@@ -13,6 +13,11 @@
 #include <stdlib.h>
 #include "str.h"
 
+/*
+**	ft_strncat concatenate n characters of the string s2 after the string s1.
+**	WARNING: s1 need sufficient space.
+*/
+
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	int					i;

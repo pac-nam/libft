@@ -17,6 +17,77 @@
 #include "printf.h"
 #include "str.h"
 
+/*
+**	ft_printf is a variadic function taking in first argument the format that
+**	will be printed with flags to precise the type and the number of argument
+**	following each flag can contain options. A flag is a letter preceded by
+**	the symbol '%'. The options are between '%' and the flag.
+**
+**	FLAGS:
+**		%b: The unsigned int argument is converted to unsigned binary.
+**		%o: The unsigned int argument is converted to unsigned octal.
+**		%O: Alias for '%llo'.
+**		%d: The int argument is converted to signed decimal notation.
+**		%i: Alias for '%d'.
+**		%D: Alias for '%lld'.
+**		%u: The unsigned int argument is converted to unsigned decimal.
+**		%U: Alias for '%llu'.
+**		%x: The unsigned int argument is converted to unsigned hexadecimal.
+**			(using lowercase "abcdef").
+**		%X: The unsigned int argument is converted to unsigned hexadecimal
+**			(using uppercase "ABCDEF").
+**		%c: The int argument is converted to an unsigned char.
+**		%C: The wint_t (wide character) argument is converted to a
+**			multibyte sequence (unicode). Alias for '%lC'.
+**		%s: The const char * argument is expected to be a pointer to an
+**			array of character type (pointer to a string).
+**		%S: The const wchar_t * argument is expected to be a pointer to
+**			an array of wide characters. Alias for '%ls'.
+**		%p: The void * pointer argument is printed in hexadecimal.
+**		%%: The charactere '%' is printed.
+**		%n: The number of characters written so far is stored into the
+**			integer indicated by the int * (or variant) pointer
+**			argument. No argument is converted.
+**	OPTIONS:
+**		'#':
+**			Used with flags 'x' and 'X' add before the value '0x' or '0X'.
+**		' ':
+**			(a space) A blank should be left before a positive number
+**			(or empty string) produced by a signed conversion.
+**		'+':
+**			Add a charactere '+' if the number passed is positive.
+**			By default a sign is used only for negative numbers.
+**			A + overrides a space if both are used.
+**		'-':
+**			The converted value is to be left adjusted on the field boundary.
+**			Option '-' overrides option '0' if both are used.
+**		'0':
+**			The value is padded on the left with zeros rather than blanks.
+**			If options '0' and '-' both appear, the '0' is ignored.
+**			If a precision is given with a numeric conversion (d, i, o, u, x,
+**			and X), the option '0' is ignored.
+**		'.X' (where X is an integer):
+**			This option represent the minimal number of digits printed for
+**			numerical values. Or the maximal length for strings.
+**		'X' (where X is an integer):
+**			This option is the minimal width printed by the argument, right
+**			adjusted by default.
+**		'hh' or 'h' or 'll' or 'l' or 'j' or 'z':
+**			This option modify the length of the parameter.
+**			'hh' = signed char or unsigned char
+**			'h'  = short or unsigned short
+**			'll' = long long or unsigned long long
+**			'l'  = long or unsigned long
+**			'j'  = intmax_t or uintmax_t
+**			'z'  = size_t or ssize_t
+**
+**	EXEMPLES:
+**		ft_printf("%-8.5s", "hello world")
+**			output: "   hello"
+**		ft_printf("% +12.9ld",(long)2345678)
+**			output: "  +002345678"
+*/
+
 static int	ft_print_str(const char *format, int *index)
 {
 	int		i;

@@ -13,36 +13,33 @@
 #include <stdlib.h>
 #include "str.h"
 
-static int	ft_count_char(char const *str)
-{
-	int		i;
-	int		len;
-
-	i = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
-		i++;
-	len = ft_strlen(&str[i]);
-	i += len - 1;
-	while ((str[i] == ' ' || str[i] == '\n' || str[i] == '\t') && --len)
-		--i;
-	return ((len > 0) ? len : 0);
-}
+/*
+**	ft_strtrim return a copy of the string passed in parameter
+**	without the side spaces.
+**	WARNING: ft_strtrim use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
+*/
 
 char		*ft_strtrim(char const *s)
 {
-	int		i;
-	int		len;
+	int		start;
+	int		end;
 	char	*str;
 
-	i = 0;
 	if (!s)
 		return (NULL);
-	len = ft_count_char(s);
-	if (!(str = (char*)malloc(len + 1)))
+	start = 0;
+	while (s[start] != '\0'
+	&& (s[start] == ' ' || s[start] == '\n' || s[start] == '\t'))
+		++start;
+	end = ft_strlen(s) - 1;
+	while (end && (s[end] == ' ' || s[end] == '\n' || s[end] == '\t'))
+		--end;
+	if (start >= end)
+		return ft_strdup("");
+	if (!(str = (char*)malloc((end - start) + 1)))
 		return (NULL);
-	str[len] = '\0';
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		++i;
-	ft_strncpy(str, &s[i], len);
+	str[end - start] = '\0';
+	ft_strncpy(str, &s[start], end - start);
 	return (str);
 }

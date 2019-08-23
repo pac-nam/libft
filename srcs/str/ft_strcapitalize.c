@@ -12,6 +12,11 @@
 
 #include "char.h"
 
+/*
+**	ft_strcapitalize take a string in argument
+**	and capitalize every lower letters.
+*/
+
 char		*ft_strcapitalize(char *str)
 {
 	int		x;

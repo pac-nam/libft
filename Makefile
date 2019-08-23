@@ -102,6 +102,7 @@ STR_NAME	=	ft_strcat.c				\
 				ft_strrev.c				\
 				ft_strcapitalize.c		\
 				ft_strlowerize.c		\
+				ft_strupperize.c		\
 
 LIST_FOLDER = list
 LIST_NAME	=	ft_lstadd.c				\
@@ -137,7 +138,7 @@ MATH_NAME	=	ft_bracket.c			\
 				ft_abs.c				\
 
 PRINTF_FOLDER = printf
-PRINTF_NAME	=	ft_printf.c				\
+#PRINTF_NAME	=	ft_printf.c				\
 				ft_m_count.c            \
 				ft_last_char.c          \
 				ft_take_infos.c         \
