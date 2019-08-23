@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   printf_srcs.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef PRINTF_SRCS_H
+# define PRINTF_SRCS_H
 
 # include <stdarg.h>
 
@@ -34,7 +34,6 @@ int		ft_printf_u(unsigned long long nb, int *infos);
 int		ft_printf_x(unsigned long long nb, int *infos);
 int		ft_printf_mx(unsigned long long nb, int *infos);
 
-int		ft_printf(const char *str, ...);
 int		ft_last_char_index(char *str);
 int		ft_printf_pass_str(char *str);
 char	ft_last_char(char *str);

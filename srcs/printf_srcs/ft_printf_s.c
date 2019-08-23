@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 #include "print.h"
-#include "printf.h"
+#include "printf_srcs.h"
 #include "str.h"
 
 static int	ft_printf_s_rest(int *info)

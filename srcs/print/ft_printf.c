@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "memory.h"
-#include "printf.h"
+#include "printf_srcs.h"
 #include "str.h"
 
 /*
@@ -82,10 +82,10 @@
 **			'z'  = size_t or ssize_t
 **
 **	EXEMPLES:
-**		ft_printf("%-8.5s", "hello world")
-**			output: "   hello"
-**		ft_printf("% +12.9ld",(long)2345678)
-**			output: "  +002345678"
+**		ft_printf("|%-8.5s", "hello world|\n")
+**			output: |hello   |\n
+**		ft_printf("|% +12.9ld|",(long)2345678)
+**			output: |  +002345678|\n
 */
 
 static int	ft_print_str(const char *format, int *index)

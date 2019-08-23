@@ -25,6 +25,7 @@ void				ft_putnbr_fd(int nb, int fd);
 void				ft_printmemory(void *ptr, int length);
 void                ft_putaddr(void *ptr);
 
+int		            ft_printf(const char *str, ...);
 int					ft_printnchar(int nb, char c);
 
 #endif

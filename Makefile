@@ -26,7 +26,6 @@ CONV_FOLDER = conversion
 CONV_NAME	=	ft_atoi.c				\
 				ft_atoll.c				\
 				ft_itoa.c				\
-				ft_dtoa.c				\
 				ft_itoa_base.c			\
 				ft_lltoa.c              \
 				ft_ulltoa_base.c        \
@@ -128,6 +127,7 @@ PRINT_NAME	=	ft_putchar.c			\
 				ft_printnchar.c         \
 				ft_printmemory.c        \
 				ft_putaddr.c			\
+				ft_printf.c				\
 
 MATH_FOLDER = math
 MATH_NAME	=	ft_bracket.c			\
@@ -137,9 +137,8 @@ MATH_NAME	=	ft_bracket.c			\
 				ft_sort_int_tab.c		\
 				ft_abs.c				\
 
-PRINTF_FOLDER = printf
-#PRINTF_NAME	=	ft_printf.c				\
-				ft_m_count.c            \
+PRINTF_FOLDER = printf_srcs
+PRINTF_NAME	=	ft_m_count.c            \
 				ft_last_char.c          \
 				ft_take_infos.c         \
 				ft_printf_s.c           \

@@ -12,7 +12,7 @@
 
 #include "char.h"
 #include "conversion.h"
-#include "printf.h"
+#include "printf_srcs.h"
 #include "str.h"
 
 static int		ft_printf_infos_z_len_pre(int **info, char *str, int max)

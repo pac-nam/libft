@@ -1,49 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_mc.c                                     :+:      :+:    :+:   */
+/*   ft_printf_c.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 10:24:41 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 16:06:14 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:04:04 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "conversion.h"
-#include "memory.h"
 #include "print.h"
-#include "printf.h"
-#include "str.h"
+#include "printf_srcs.h"
 
-static int	ft_printf_mc_rest(int *info, int len)
+static int	ft_printf_c_rest(int *info)
 {
 	if (info[1] == -1)
-		return (ft_printnchar(info[5] - len, ' '));
+		return (ft_printnchar(info[5] - 1, ' '));
 	else
-		return (ft_printnchar(info[5] - len, '0'));
+		return (ft_printnchar(info[5] - 1, '0'));
 }
 
-int			ft_printf_mc(va_list ap, int *info)
+int			ft_printf_c(va_list ap, int *info)
 {
-	int			count;
-	int			len;
-	wchar_t		c;
-	char		*str;
+	int		count;
+	char	c;
 
+	if (info[7] == 4)
+		return (ft_printf_mc(ap, info));
 	count = 0;
-	c = va_arg(ap, wchar_t);
-	len = ft_strlenwcs(&c);
-	if (!(str = (char*)malloc(len + 1)))
-		return (0);
-	str[len] = '\0';
-	len = ft_wc_convert(str, c);
+	c = (char)va_arg(ap, int);
 	if (info[2] == -1)
-		count += ft_printf_mc_rest(info, len);
-	count += write(1, str, len);
+		count += ft_printf_c_rest(info);
+	write(1, &c, 1);
 	if (info[2] != -1)
-		count += ft_printf_mc_rest(info, len);
-	ft_strdel(&str);
-	return (count);
+		count += ft_printf_c_rest(info);
+	return (count + 1);
 }

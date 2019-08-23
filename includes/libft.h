@@ -20,7 +20,6 @@
 # include "list.h"
 # include "print.h"
 # include "math.h"
-# include "printf.h"
 # include "colors.h"
 
 #endif
