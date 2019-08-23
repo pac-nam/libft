@@ -35,6 +35,7 @@ CONV_NAME	=	ft_atoi.c				\
 				ft_intlen_base.c		\
 				ft_intlen.c				\
 				ft_lllen.c				\
+				ft_dtoa.c				\
 
 CHAR_FOLDER = char
 CHAR_NAME	=	ft_isalnum.c			\
@@ -191,23 +192,23 @@ all : $(OBJ_FOLDER) $(NAME)
 $(OBJ_FOLDER):
 	@mkdir -p $@
 	@mkdir -p $(addprefix $@/, $(SUBFOLDERS))
-	@echo "creating $(NAME) object...\n"
+	@echo "creating $(NAME) object..."
 
 $(NAME): $(OBJ)
 	@ar rc $@.a $^
 	@ranlib $@.a
-	@echo "\n\033[32m[ ✔ ] $@ compiled\n\033[0m"
+	@echo "\n\033[32m[ ✔ ] $@ compiled\033[0m"
 
 $(OBJ_FOLDER)/%.o: $(SRC_FOLDER)/%.c
 	@$(CC) -I$(INCLUDE_FOLDER) -c $(FLAGS) $< -o $@
 
 clean :
 	@/bin/rm -rf $(OBJ_FOLDER)
-	@echo "\033[33m[ ✔ ] $(NAME) objects deleted\n\033[0m"
+	@echo "\033[33m[ ✔ ] $(NAME) objects deleted\033[0m"
 
 fclean : clean
 	@/bin/rm -f $(NAME).a
-	@echo "\033[33m[ ✔ ] $(NAME) deleted\n\033[0m"
+	@echo "\033[33m[ ✔ ] $(NAME) deleted\033[0m"
 
 lib : all clean
 

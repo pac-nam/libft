@@ -11,73 +11,50 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "conversion.h"
+#include "str.h"
 
 /*
-**	ft_dtoa is a work in progress and is unstable.
-**	Do not use it.
+**	ft_dtoa take return a string containing the value passed in parameter
+**	in base 10.
+**	WARNING: ft_dtoa use malloc. So it need to be free to avoid leaks.
+**	WARNING: malloc can fail in this case, NULL is returned.
 */
 
-static char	*ft_formatfloat(int isnegative, long exposant, long mantisse)
+static char	*ft_remove_zero(char *str)
 {
-	isnegative = isnegative;
-	exposant = exposant;
-	mantisse = mantisse;
-	return (ft_itoa(mantisse));
+	int		index;
+	index = ft_strlen(str) - 1;
+	while (index > 1 && str[index] == '0')
+		index--;
+	str[index + 1] = '\0';
+	return (str);
 }
 
-static long	ft_getbits(const unsigned char *n, int start, int end)
+char	*ft_dtoa(double n)
 {
-	int		charindex;
-	int		insideindex;
-	int		decalage;
-	long	result;
+	char				*first;
+	char				*second;
+	char				*result;
+	int					i;
 
-	result = 0;
-	charindex = start % 8;
-	while (start < end)
+	if (!(first = ft_itoa(n)))
+		return (NULL);
+	if (!(second = (char*)malloc(14)))
 	{
-		ft_printmemory((unsigned char*)&result, 8);
-		ft_putchar('\n');
-		insideindex = start % 8;
-		if ((decalage = 8 - (end - start)) < 8)
-			decalage = 8;
-		result = result < decalage;
-		result += (n[charindex] << insideindex) >> (insideindex + decalage);
-		start += insideindex;
-		if (!insideindex)
-			start += 8;
+		ft_strdel(&first);
+		return (NULL);
 	}
-	return result;
-}
-
-char		*ft_dtoa(double n)
-{
-	long			exposant;
-	long			mantisse;
-	unsigned char	*strfloat;
-
-	strfloat = (unsigned char*)&n;
-	ft_putstr("strfloat: ");
-	ft_printmemory(strfloat, 8);
-	ft_putchar('\n');
-	if(sizeof(double)*8 == 32)
+	second[0] = '.';
+	second[14] = '\0';
+	i = 0;
+	while (++i <= 13)
 	{
-		exposant = ft_getbits(strfloat, 2, 9);
-		mantisse = ft_getbits(strfloat, 9, 32);
+		n = (n - (long)n) * 10;
+		second[i] = ((int)n % 10) + '0';
 	}
-	else
-	{
-		exposant = ft_getbits(strfloat, 2, 13);
-		mantisse = ft_getbits(strfloat, 13, 64);
-	}
-	if ((strfloat[0] << 2) >> 7)
-		exposant = -exposant;
-	ft_putstr("exposant: ");
-	ft_printmemory(&exposant, 8);
-	ft_putchar('\n');
-	ft_putstr("mantisse: ");
-	ft_printmemory(&mantisse, 8);
-	ft_putchar('\n');
-	return (ft_formatfloat(strfloat[0] >> 7, exposant, mantisse));
+	result = ft_strjoin(first, ft_remove_zero(second));
+	ft_strdel(&first);
+	ft_strdel(&second);
+	return (result);
 }
