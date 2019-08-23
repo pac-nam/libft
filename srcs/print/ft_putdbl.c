@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dtoa.c                                          :+:      :+:    :+:   */
+/*   ft_putdbl.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 10:04:25 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 13:56:22 by tbleuse          ###   ########.fr       */
+/*   Created: 2017/11/08 16:09:01 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/11/09 12:10:48 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "conversion.h"
+#include <unistd.h>
 #include "str.h"
+#include "conversion.h"
 
 /*
-**	ft_dtoa take return a string containing the value passed in parameter
-**	in base 10.
-**	WARNING: ft_dtoa use malloc. So it need to be free to avoid leaks.
-**	WARNING: malloc can fail in this case, NULL is returned.
+**	print the double nb on the standard output.
+**  the double always have deciamal part.
 */
 
-char			*ft_dtoa(double n)
+void	    ft_putdbl(double n)
 {
-	char	dst[64];
+	char	to_print[64];
     char    *decimal;
 	int		i;
 
-	ft_itoa_no_malloc(n, dst);
-    decimal = dst + ft_strlen(dst);
+	ft_itoa_no_malloc(n, to_print);
+    decimal = to_print + ft_strlen(to_print);
 	decimal[0] = '.';
 	decimal[13] = '\0';
 	i = 0;
@@ -36,9 +35,9 @@ char			*ft_dtoa(double n)
 		n = (n - (long)n) * 10;
 		decimal[i] = ((int)n % 10) + '0';
 	}
-	--i;
+    --i;
 	while (i > 1 && decimal[i] == '0')
 		--i;
 	decimal[i + 1] = '\0';
-	return (ft_strdup(dst));
+	write(1, to_print, ft_strlen(to_print));
 }

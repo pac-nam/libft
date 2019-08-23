@@ -13,7 +13,7 @@
 #include "print.h"
 
 /*
-**	print the string s on the standard output.
+**	print the number nb on the standard output.
 */
 
 void	ft_putnbr(int nb)

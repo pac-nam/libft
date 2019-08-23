@@ -13,7 +13,7 @@
 #include <unistd.h>
 
 /*
-**	print the pointer address.
+**	print address of the pointer passed in parameter.
 */
 
 void    ft_putaddr(void *ptr)

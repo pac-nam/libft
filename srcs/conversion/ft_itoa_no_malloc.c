@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_no_malloc.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,39 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "str.h"
 #include "conversion.h"
 
 /*
-**	ft_itoa take return a string containing the value passed in parameter
-**	in base 10.
-**	WARNING: ft_itoa use malloc. So it need to be free to avoid leaks.
-**	WARNING: malloc can fail in this case, NULL is returned.
+**	ft_itoa_no_malloc convert the value passed in parameter to string in base
+**	10 and put it in the dst passed in parameter.
+**	WARNING: dst need sufficient space.
 */
 
-char		*ft_itoa(int n)
+char		*ft_itoa_no_malloc(int n, char *dst)
 {
-	char	*str;
 	int		i;
 
 	i = ft_intlen(n);
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	if (!(str = (char*)malloc(i + 1)))
-		return (NULL);
+		return (ft_strcpy(dst, "-2147483648"));
 	if (n == 0)
-		str[0] = '0';
+		dst[0] = '0';
 	if (n < 0)
 	{
-		str[0] = '-';
+		dst[0] = '-';
 		n = -n;
 	}
-	str[i--] = '\0';
+	dst[i--] = '\0';
 	while (n)
 	{
-		str[i--] = (n % 10) + '0';
+		dst[i--] = (n % 10) + '0';
 		n = n / 10;
 	}
-	return (str);
+	return (dst);
 }

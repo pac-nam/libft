@@ -36,6 +36,7 @@ CONV_NAME	=	ft_atoi.c				\
 				ft_intlen.c				\
 				ft_lllen.c				\
 				ft_dtoa.c				\
+				ft_itoa_no_malloc.c		\
 
 CHAR_FOLDER = char
 CHAR_NAME	=	ft_isalnum.c			\
@@ -128,6 +129,7 @@ PRINT_NAME	=	ft_putchar.c			\
 				ft_printnchar.c         \
 				ft_printmemory.c        \
 				ft_putaddr.c			\
+				ft_putdbl.c				\
 				ft_printf.c				\
 
 MATH_FOLDER = math
