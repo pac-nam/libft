@@ -171,9 +171,19 @@ COLOR_NAME	=	ft_blue.c				\
 				ft_red.c				\
 				ft_yellow.c				\
 
+MALLOC_FOLDER = malloc
+MALLOC_NAME	=	ft_malloc.c				\
+				ft_free.c				\
+				ft_realloc.c			\
+				ft_show_alloc_mem.c		\
+				ft_calloc.c				\
+				ft_reallocf.c			\
+				ft_malloc_good_size.c	\
+
 SUBFOLDERS =	$(CONV_FOLDER) $(CHAR_FOLDER) $(MEMORY_FOLDER)	\
 				$(STR_FOLDER) $(LIST_FOLDER) $(PRINT_FOLDER)	\
 				$(MATH_FOLDER) $(PRINTF_FOLDER) $(COLOR_FOLDER)	\
+				$(MALLOC_FOLDER)								\
 
 CONV_C = $(addprefix $(CONV_FOLDER)/, $(CONV_NAME))
 CHAR_C = $(addprefix $(CHAR_FOLDER)/, $(CHAR_NAME))
@@ -184,10 +194,11 @@ PRINT_C = $(addprefix $(PRINT_FOLDER)/, $(PRINT_NAME))
 MATH_C = $(addprefix $(MATH_FOLDER)/, $(MATH_NAME))
 PRINTF_C = $(addprefix $(PRINTF_FOLDER)/, $(PRINTF_NAME))
 COLOR_C = $(addprefix $(COLOR_FOLDER)/, $(COLOR_NAME))
+MALLOC_C = $(addprefix $(MALLOC_FOLDER)/, $(MALLOC_NAME))
 
 SRC =	$(CONV_C) $(CHAR_C) $(MEMORY_C) $(STR_C)	\
 		$(LIST_C) $(PRINT_C) $(MATH_C) $(PRINTF_C)	\
-		$(COLOR_C)									\
+		$(COLOR_C) $(MALLOC_C)						\
 
 OBJ = $(addprefix $(OBJ_FOLDER)/, $(SRC:.c=.o))
 
@@ -200,7 +211,7 @@ $(NAME): $(OBJ_FOLDER) $(OBJ)
 
 $(OBJ_FOLDER):
 	@mkdir -p $@
-	@mkdir -p $(addprefix $@/, $(SUBFOLDERS))
+	mkdir -p $(addprefix $@/, $(SUBFOLDERS))
 	@echo "creating $(NAME) object..."
 
 $(OBJ_FOLDER)/%.o: $(SRC_FOLDER)/%.c
