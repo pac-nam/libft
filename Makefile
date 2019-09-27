@@ -131,6 +131,7 @@ PRINT_NAME	=	ft_putchar.c			\
 				ft_putaddr.c			\
 				ft_putdbl.c				\
 				ft_printf.c				\
+				ft_buffer.c				\
 
 MATH_FOLDER = math
 MATH_NAME	=	ft_bracket.c			\
@@ -211,7 +212,7 @@ $(NAME): $(OBJ_FOLDER) $(OBJ)
 
 $(OBJ_FOLDER):
 	@mkdir -p $@
-	mkdir -p $(addprefix $@/, $(SUBFOLDERS))
+	@mkdir -p $(addprefix $@/, $(SUBFOLDERS))
 	@echo "creating $(NAME) object..."
 
 $(OBJ_FOLDER)/%.o: $(SRC_FOLDER)/%.c
