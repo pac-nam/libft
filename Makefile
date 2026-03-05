@@ -181,10 +181,13 @@ MALLOC_NAME	=	ft_malloc.c				\
 				ft_reallocf.c			\
 				ft_malloc_good_size.c	\
 
+TIME_FOLDER = time
+TIME_NAME	=	ft_usleep.c				\
+
 SUBFOLDERS =	$(CONV_FOLDER) $(CHAR_FOLDER) $(MEMORY_FOLDER)	\
 				$(STR_FOLDER) $(LIST_FOLDER) $(PRINT_FOLDER)	\
 				$(MATH_FOLDER) $(PRINTF_FOLDER) $(COLOR_FOLDER)	\
-				$(MALLOC_FOLDER)								\
+				$(MALLOC_FOLDER) $(TIME_FOLDER)					\
 
 CONV_C = $(addprefix $(CONV_FOLDER)/, $(CONV_NAME))
 CHAR_C = $(addprefix $(CHAR_FOLDER)/, $(CHAR_NAME))
@@ -196,10 +199,10 @@ MATH_C = $(addprefix $(MATH_FOLDER)/, $(MATH_NAME))
 PRINTF_C = $(addprefix $(PRINTF_FOLDER)/, $(PRINTF_NAME))
 COLOR_C = $(addprefix $(COLOR_FOLDER)/, $(COLOR_NAME))
 MALLOC_C = $(addprefix $(MALLOC_FOLDER)/, $(MALLOC_NAME))
-
+TIME_C = $(addprefix $(TIME_FOLDER)/, $(TIME_NAME))
 SRC =	$(CONV_C) $(CHAR_C) $(MEMORY_C) $(STR_C)	\
 		$(LIST_C) $(PRINT_C) $(MATH_C) $(PRINTF_C)	\
-		$(COLOR_C) $(MALLOC_C)						\
+		$(COLOR_C) $(MALLOC_C) $(TIME_C)			\
 
 OBJ = $(addprefix $(OBJ_FOLDER)/, $(SRC:.c=.o))
 
