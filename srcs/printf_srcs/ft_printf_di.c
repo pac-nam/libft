@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdarg.h>
 #include "conversion.h"
 #include "memory.h"
 #include "print.h"
@@ -105,7 +106,7 @@ int				ft_printf_di(va_list ap, int *info)
 	if (info[7] == 4)
 		str = ft_lltoa((long long)va_arg(ap, long long));
 	if (info[7] == 5)
-		str = ft_lltoa((long long)(intmax_t)va_arg(ap, long long));
+		str = ft_lltoa((long long)va_arg(ap, long long));
 	if (info[7] == 6)
 		str = ft_lltoa((long long)va_arg(ap, unsigned long long));
 	if (str[0] == '0' && info[6] == 0)

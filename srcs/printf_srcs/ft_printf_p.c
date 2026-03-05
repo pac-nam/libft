@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdarg.h>
 #include "conversion.h"
 #include "memory.h"
 #include "print.h"
